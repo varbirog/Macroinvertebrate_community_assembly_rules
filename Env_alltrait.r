@@ -14,8 +14,8 @@ f_rao<-function(x,d=dist.mat.Flagellated) {
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
-nr<-9 #999 #999 # randomok sz?ma, majd emeld fel!
-#0dist.mat
+nr<-9999 #999 #999 
+#dist.mat
 t_names=names(trait)
 nt<-length(t_names)
 
@@ -188,15 +188,16 @@ pvalue.drift1,
 pvalue.drift2,
 pvalue.drift3)
 
-# Itt adja ki a veget 
+# END STEPS 
 save.image("data_9999.RData")
 
  write.table(kimenet, file="clipboard-16384",sep="\t",row.names=T,col.names=T)
 
 
-dat= read.table(file= "clipboard", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
+dat= read.table(file= "kimenet_with_states.csv", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
 
 
+# Generating Plots
 
 for(i in 4:ncol(dat)){
   
