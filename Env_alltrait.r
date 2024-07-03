@@ -11,6 +11,7 @@ f_rao<-function(x,d=dist.mat.Flagellated) {
   x=as.matrix(x)
   1-(x/sum(x))*d*t(x/sum(x))
 }
+# function calculating Rao's quadratic entropy simplyfied
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
