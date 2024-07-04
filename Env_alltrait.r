@@ -1,17 +1,11 @@
-load("phyto.traits.RData")
+# Load data
 
-load("phyto.plots.RData")
-load("phyto.env.RData")
-trait= read.table(file= "clipboard", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
-plots= read.table(file= "clipboard", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
-x= read.table(file= "clipboard", sep="\t", header=T,encoding=c("windows-1250"))
+trait= readRDS("trait.rds")
+plots= readRDS("plots.rds")
+
 
 # function calculating Rao's quadratic entropy
-f_rao<-function(x,d=dist.mat.Flagellated) {
-  x=as.matrix(x)
-  1-(x/sum(x))*d*t(x/sum(x))
-}
-# function calculating Rao's quadratic entropy simplyfied
+# function calculating Rao's quadratic entropy simplified
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
@@ -20,12 +14,7 @@ nr<-9999 #999 #999
 t_names=names(trait)
 nt<-length(t_names)
 
-for (i in t_names){
-  
-  assign(paste('dist.mat.', i, sep=''),as.matrix(dist(trait[,i])))
-  assign(paste('RaoQ.', i, sep=''),rep(NA,n))
-}
-# ez a jo
+# RaoQ distance matrixes
 for (k in 1:nt){
   nam=paste('dist.mat.', t_names[k], sep='')
   adat=eval(parse(text=nam))
@@ -218,4 +207,69 @@ for(i in 4:ncol(dat)){
   ggsave(paste(colnames(dat)[i],".jpg"), device = "jpg")
   
 }
+
+# LDA
+library(readxl)
+dat <- read_excel("LDAalaptab.xlsx", sheet = "LDAalaptab")
+cols <- c("#CC6600","#CC0066","#33CC99","#6633FF")
+datc=dat[,2:51]
+datc$cat=as.factor(datc$cat)
+datd <- datc %>% dplyr::select(-c(egg4,
+                                  aff, par,
+                                  pff,
+                                  xyl,
+                                  fwl6,
+                                  fwl7,
+                                  s1,
+                                  s7,
+                                 wnb3))
+dat2=datc %>% na.omit()
+dat3=datd %>% na.omit()
+p.lda <- lda(cat ~., data = dat2) # Original
+ summary(p.lda )
+p.lda_r <- lda(cat ~., data = dat3) # Without rare traits
+ summary(p.lda_r )
+dat2$cat=as.factor(dat2$cat)
+p = ggord(
+  p.lda,
+  dat2$cat,
+  ellipse = F,
+  cols=cols,
+  poly = T,
+  hull = T,
+  arrow = 0.1,
+  size= 3,
+  alpha_el=0.4,
+  txt=5,
+  veccol="gray48",
+  axes = c("1", "2"))
+pr = ggord(
+  p.lda_r,
+  dat3$cat,
+  ellipse = F,
+  cols=cols,
+  poly = T,
+  hull = T,
+  arrow = 0.1,
+  size= 3,
+  alpha_el=0.4,
+  txt=5,
+  veccol="gray48",
+  axes = c("1", "2"))
+
+
+
+ p  + scale_x_continuous(name="LDA axis1 55.38%")+
+   scale_y_continuous(name="LDA axis2 23.29%") +
+   scale_shape_manual( values = c(1,2,16,17))+
+   theme_classic()+
+ theme(text = element_text(size=16))
+ 
+ pr  + scale_x_continuous(name="LDA axis1 42.44%",limits = c(-9,9))+
+   scale_y_continuous(name="LDA axis2 34.17%",limits = c(-4,6)) +
+   scale_shape_manual( values = c(1,2,16,17))+
+   theme_classic()+
+   theme(text = element_text(size=16))
+ 
+
 
