@@ -9,7 +9,8 @@ plots= readRDS("plots.rds")
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
-nr<-9999 #999 #999 
+## Note large randomization take much more time even days on slower config
+nr<-9999 #999 #99 
 #dist.mat
 t_names=names(trait)
 nt<-length(t_names)
@@ -182,7 +183,7 @@ pvalue.drift3)
 save.image("data_9999.RData")
 
  write.table(kimenet, file="clipboard-16384",sep="\t",row.names=T,col.names=T)
-
+write.table(kimenet, file="kimenet_with_states.csv",sep="\t",row.names=T,col.names=T)
 
 dat= read.table(file= "kimenet_with_states.csv", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
 
