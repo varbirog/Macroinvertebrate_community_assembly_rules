@@ -9,13 +9,15 @@ plots= readRDS("plots.rds")
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
-## Note large randomization take much more time even days on slower config
-nr<-9999 #999 #99 
-#dist.mat
+## Note large randomization take much more time even days on slower config we suggest 9999 for correct calculation  
+#just for sample code run we use 9 
+nr<-9 #9999 #999 #99 
+# dist.mat  
 t_names=names(trait)
 nt<-length(t_names)
 
 # RaoQ distance matrixes
+
 for (k in 1:nt){
   nam=paste('dist.mat.', t_names[k], sep='')
   adat=eval(parse(text=nam))
@@ -67,24 +69,6 @@ time.taken <- end.time - start.time
 time.taken
 
 
-for (j in 1:nr){
-  print(j)
-  
-  nam <- paste("dist.mat.", k, sep = "")  
-  nam2 <- paste("random.RaoQ.", k, sep = "")
-  adat=eval(parse(text=nam)) 
-  adat2=eval(parse(text=nam2))
-  W<-sample(1:nrow(adat))
-  random.dist.mat<-adat[W,W]
-  #random.dist.mat<-dist.mat.aff[W,W]
-  for (i in 1:n){
-    adat2[j,i]<-f(as.matrix(plots[i,]),random.dist.mat)
-  
-  }
-  assign(nam2,adat2)
-}
-
-
 
 for (i in t_names){
   
@@ -94,7 +78,7 @@ for (i in t_names){
 
 
 
-
+# creation of matrixes for storing RAQ data
 for (k in t_names){
   
   nam <- paste("RaoQ.", k, sep = "")  
@@ -103,11 +87,10 @@ for (k in t_names){
   
   adat1=eval(parse(text=nam))
   adat2=eval(parse(text=nam2))
-  
   adat3=eval(parse(text=nam3))
   
   
-  
+# creation of matrixes for storing p-values removing NAs and infinitive artefacts 
 for (i in 1:n){
   
     adat3[i]<-(sum(adat1[i]>=adat2[,i])+1)/(nr+1)
@@ -125,7 +108,7 @@ for (i in 1:n){
 
 
 
-
+# Making of the final result table
 
 kimenet=rbind(
 pvalue.gra,
@@ -182,7 +165,7 @@ pvalue.drift3)
 # END STEPS 
 save.image("data_9999.RData")
 
- write.table(kimenet, file="clipboard-16384",sep="\t",row.names=T,col.names=T)
+write.table(kimenet, file="clipboard-16384",sep="\t",row.names=T,col.names=T)
 write.table(kimenet, file="kimenet_with_states.csv",sep="\t",row.names=T,col.names=T)
 
 dat= read.table(file= "kimenet_with_states.csv", sep="\t", header=T,encoding=c("windows-1250"),row.names = 1)
