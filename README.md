@@ -15,10 +15,6 @@ boda.pal@ecolres.hu;
 Gábor Várbíró
 varbirog@gmail.com
 
-Pál Juhász-Nagy Doctoral School of Biology and Environmental Sciences University of Debrecen Egyetem square 1 Debrecen 4032 Hungary
-Department of Tisza Research, HUN-REN Centre for Ecological Research Institute of Aquatic Ecology 18/c Bem square Debrecen 4026 Hungary
-Laboratory for Environmental Protection, Department of Public Health Government Office of Borsod-Abaúj-Zemplén County.Mindszent square 4. Miskolc 3530 Hungary
-
 The online version contains supplementary material available at https://doi.org/10.1007/s10750-024-05781-2.
 
 ![plot](https://github.com/varbirog/Macroinvertebrate_community_assembly_rules/blob/main/Fig_1.jpg)
@@ -27,7 +23,7 @@ The online version contains supplementary material available at https://doi.org/
 Flow intermittency and poor environmental conditions can occur separately or simultaneously, affecting the occurrence of trait states in stream macroinvertebrate assemblages. Within the framework of limiting similarity theory, we investigate whether environmental filtering or limiting similarity serves as the primary driver force under three environmental conditions: unstressed (perennial environment and good ecological potential), single-stressed (intermittent condition or poor ecological potential), and multi-stressed (intermittent condition and poor ecological potential) environments. Our analysis validated neutral trait states that are not influenced by different environmental stressors. In unstressed environments, limiting similarity is the primary driver force shaping the macroinvertebrate community. In stressed environments, however, the type of stress determines the influence of environmental filtering. It is not the quantity but rather the quality of stress that increases the influence of environmental filtering. Flow intermittency has a more pronounced effect on the aquatic community than poor ecological potential because it eliminates living conditions, while poor ecological conditions merely restrict them. As anticipated, we observed that certain trait states have specific responses indicating that different driver forces influence them across various environmental conditions. Our study provides valuable insights for managing freshwater habitats and developing adaptive conservation strategies considering increasing drought frequency worldwide.
 
 
-#Keywords
+# Keywords
 Trait states
 Environmental filtering
 Limiting similarity
