@@ -1,23 +1,23 @@
 # Exploring macroinvertebrate community assembly rules: unraveling the effects of flow intermittency and poor ecological potential on environmental filtering and limiting similarity through functional traits
-# Analyses
+## Authors: 
 
 Júlia Szeles
-julia.szeles94@gmail.com
-Viktória B-Béres
-beres.viktoria@gmail.com
+julia.szeles94@gmail.com; Viktória B-Béres
+beres.viktoria@gmail.com; 
 Tamás Bozóki
-bozoki.tamas@ecolres.hu
+bozoki.tamas@ecolres.hu; 
 Judit Fekete
-fekete.judit@ecolres.hu
+fekete.judit@ecolres.hu;
 Márk Ficsór
-ficsor.mark@borsod.gov.hu
+ficsor.mark@borsod.gov.hu; 
 Pál Boda
-boda.pal@ecolres.hu
+boda.pal@ecolres.hu; 
 Gábor Várbíró
 varbirog@gmail.com
+
 Pál Juhász-Nagy Doctoral School of Biology and Environmental Sciences University of Debrecen Egyetem square 1 Debrecen 4032 Hungary
 Department of Tisza Research, HUN-REN Centre for Ecological Research Institute of Aquatic Ecology 18/c Bem square Debrecen 4026 Hungary
-Laboratory for Environmental Protection, Department of Public HealthGovernment Office of Borsod-Abaúj-Zemplén CountyMindszent square 3.Mindszent square 4.Miskolc3530Hungary
+Laboratory for Environmental Protection, Department of Public Health Government Office of Borsod-Abaúj-Zemplén County.Mindszent square 4. Miskolc 3530 Hungary
 
 The online version contains supplementary material available at https://doi.org/10.1007/s10750-024-05781-2.
 
