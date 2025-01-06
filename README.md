@@ -24,11 +24,11 @@ Flow intermittency and poor environmental conditions can occur separately or sim
 
 
 # Keywords
-Trait states
-Environmental filtering
-Limiting similarity
-Aquatic macroinvertebrates
-Drought
+Trait states;
+Environmental filtering;
+Limiting similarity;
+Aquatic macroinvertebrates;
+Drought;
 Intermittent streams
 
 
