@@ -1,4 +1,5 @@
 # Exploring macroinvertebrate community assembly rules: unraveling the effects of flow intermittency and poor ecological potential on environmental filtering and limiting similarity through functional traits
+
 ## Authors: 
 
 Júlia Szeles
@@ -15,13 +16,16 @@ boda.pal@ecolres.hu;
 Gábor Várbíró
 varbirog@gmail.com
 
-The online version contains supplementary material available at https://doi.org/10.1007/s10750-024-05781-2.
+The online version available at:
 
-![plot](https://github.com/varbirog/Macroinvertebrate_community_assembly_rules/blob/main/Fig_1.jpg)
+Hydrobiologia https://doi.org/10.1007/s10750-024-05781-2
 
 # Abstract
-Flow intermittency and poor environmental conditions can occur separately or simultaneously, affecting the occurrence of trait states in stream macroinvertebrate assemblages. Within the framework of limiting similarity theory, we investigate whether environmental filtering or limiting similarity serves as the primary driver force under three environmental conditions: unstressed (perennial environment and good ecological potential), single-stressed (intermittent condition or poor ecological potential), and multi-stressed (intermittent condition and poor ecological potential) environments. Our analysis validated neutral trait states that are not influenced by different environmental stressors. In unstressed environments, limiting similarity is the primary driver force shaping the macroinvertebrate community. In stressed environments, however, the type of stress determines the influence of environmental filtering. It is not the quantity but rather the quality of stress that increases the influence of environmental filtering. Flow intermittency has a more pronounced effect on the aquatic community than poor ecological potential because it eliminates living conditions, while poor ecological conditions merely restrict them. As anticipated, we observed that certain trait states have specific responses indicating that different driver forces influence them across various environmental conditions. Our study provides valuable insights for managing freshwater habitats and developing adaptive conservation strategies considering increasing drought frequency worldwide.
+Flow intermittency and poor environmen-tal conditions can occur separately or simultaneously,affecting the occurrence of trait states in stream mac-roinvertebrate assemblages. Within the frameworkof limiting similarity theory, we investigate whetherenvironmental filtering or limiting similarity servesas the primary driver force under three environmen-tal conditions: unstressed (perennial environmentand good ecological potential), single-stressed (inter-mittent condition or poor ecological potential), andmulti-stressed (intermittent condition and poor eco-logical potential) environments. Our analysis vali-dated neutral trait states that are not influenced bydifferent environmental stressors. In unstressed envi-ronments, limiting similarity is the primary driverforce shaping the macroinvertebrate community. Instressed environments, however, the type of stressdetermines the influence of environmental filtering.It is not the quantity but rather the quality of stressthat increases the influence of environmental filtering.Flow intermittency has a more pronounced effect onthe aquatic community than poor ecological poten-tial because it eliminates living conditions, whilepoor ecological conditions merely restrict them. Asanticipated, we observed that certain trait states havespecific responses indicating that different driverforces influence them across various environmentalconditions. Our study provides valuable insights formanaging freshwater habitats and developing adap-tive conservation strategies considering increasingdrought frequency worldwide. 
 
+<p align="center">
+  <img src="https://github.com/varbirog/Macroinvertebrate_community_assembly_rules/blob/main/Fig_1.jpg" width="500" title="Graphical abstract"  alt="Graphical abstract">
+</p>
 
 # Keywords
 Trait states;
@@ -32,4 +36,4 @@ Drought;
 Intermittent streams
 
 
-
+The R code of the analyses can be found here in this GitHub repository (https://github.com/varbirog/Macroinvertebrate_community_assembly_rules)
