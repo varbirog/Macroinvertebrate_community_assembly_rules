@@ -3,16 +3,16 @@
 trait= readRDS("trait.rds")
 plots= readRDS("plots.rds")
 
-
-# function calculating Rao's quadratic entropy
 # function calculating Rao's quadratic entropy simplified
+
 f<-function(x,d) 1/(1-(x/sum(x))%*%d%*%t(x/sum(x)))
 
 n<-nrow(plots)
 ## Note large randomization take much more time even days on slower config we suggest 9999 for correct calculation  
-#just for sample code run we use 9 
+# Just as an example sample run we use 9 
 nr<-9 #9999 #999 #99 
-# dist.mat  
+
+# Just to see what is inside the Traits and select Trait names  
 t_names=names(trait)
 nt<-length(t_names)
 
@@ -33,7 +33,7 @@ for (i in 1:n){
   
 }
 
-
+# Random Rao Q matrix
 
 for (i in t_names){
   
@@ -41,7 +41,7 @@ for (i in t_names){
   
 }
 
-#Flagellated
+# Main calculation for each traits
 	start.time <- Sys.time()
 	for (k in t_names){
 	  print(k)
